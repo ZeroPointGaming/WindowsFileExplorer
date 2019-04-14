@@ -125,5 +125,53 @@
   <ItemGroup>
     <None Include="Resources\File-512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ini.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysimg.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systemfile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cmd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compressed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\executable.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
