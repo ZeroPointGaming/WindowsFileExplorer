@@ -39,6 +39,7 @@ Partial Class Form1
         Me.NameHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TypeHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.LastModifiedHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.SizeHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -166,7 +167,7 @@ Partial Class Form1
         '
         Me.ListView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.NameHeader, Me.TypeHeader, Me.LastModifiedHeader})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.NameHeader, Me.SizeHeader, Me.TypeHeader, Me.LastModifiedHeader})
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView1.ForeColor = System.Drawing.Color.White
         Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
@@ -181,17 +182,22 @@ Partial Class Form1
         'NameHeader
         '
         Me.NameHeader.Text = "Name"
-        Me.NameHeader.Width = 337
+        Me.NameHeader.Width = 249
         '
         'TypeHeader
         '
         Me.TypeHeader.Text = "Type"
-        Me.TypeHeader.Width = 144
+        Me.TypeHeader.Width = 124
         '
         'LastModifiedHeader
         '
         Me.LastModifiedHeader.Text = "Last Modified"
         Me.LastModifiedHeader.Width = 208
+        '
+        'SizeHeader
+        '
+        Me.SizeHeader.Text = "Size"
+        Me.SizeHeader.Width = 109
         '
         'Form1
         '
@@ -230,4 +236,5 @@ Partial Class Form1
     Friend WithEvents NameHeader As ColumnHeader
     Friend WithEvents TypeHeader As ColumnHeader
     Friend WithEvents LastModifiedHeader As ColumnHeader
+    Friend WithEvents SizeHeader As ColumnHeader
 End Class

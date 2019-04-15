@@ -13,7 +13,8 @@ Public Class Form1
             With node
                 .Tag = drive.Name
                 .ImageKey = "folder"
-                .SelectedImageKey = drive.Name
+                .ImageIndex = 4
+                .SelectedImageKey = "folder"
                 .Nodes.Add("Empty")
             End With
 
@@ -45,7 +46,7 @@ Public Class Form1
                     nd.Nodes.Add(folder)
 
                     Item = New ListViewItem(d.Name, 4)
-                    SubItems = New ListViewItem.ListViewSubItem() {New ListViewItem.ListViewSubItem(Item, "Directory"), New ListViewItem.ListViewSubItem(Item, d.LastAccessTime.ToShortDateString())}
+                    SubItems = New ListViewItem.ListViewSubItem() {New ListViewItem.ListViewSubItem(Item, 0), New ListViewItem.ListViewSubItem(Item, "Directory"), New ListViewItem.ListViewSubItem(Item, d.LastAccessTime.ToShortDateString())}
 
                     Item.SubItems.AddRange(SubItems)
                     ListView1.Items.Add(Item)
@@ -254,7 +255,10 @@ Public Class Form1
                     End Select
 
                     Item = New ListViewItem(file.Name, file_icon)
-                    SubItems = New ListViewItem.ListViewSubItem() {New ListViewItem.ListViewSubItem(Item, file_type.ToString()), New ListViewItem.ListViewSubItem(Item, file.LastAccessTime.ToShortDateString())}
+
+                    Dim filesize As String = (file.Length / 1000000).ToString("N0") + " Mb"
+
+                    SubItems = New ListViewItem.ListViewSubItem() {New ListViewItem.ListViewSubItem(Item, filesize.ToString), New ListViewItem.ListViewSubItem(Item, file_type.ToString()), New ListViewItem.ListViewSubItem(Item, file.LastAccessTime.ToShortDateString())}
 
                     Item.SubItems.AddRange(SubItems)
                     ListView1.Items.Add(Item)
@@ -340,7 +344,7 @@ Public Class Form1
 
                 If Not (d.Attributes And FileAttributes.Hidden) = FileAttributes.Hidden Then
                     Item = New ListViewItem(d.Name, 4)
-                    SubItems = New ListViewItem.ListViewSubItem() {New ListViewItem.ListViewSubItem(Item, "Directory"), New ListViewItem.ListViewSubItem(Item, d.LastAccessTime.ToShortDateString())}
+                    SubItems = New ListViewItem.ListViewSubItem() {New ListViewItem.ListViewSubItem(Item, 0), New ListViewItem.ListViewSubItem(Item, "Directory"), New ListViewItem.ListViewSubItem(Item, d.LastAccessTime.ToShortDateString())}
 
                     Item.SubItems.AddRange(SubItems)
                     ListView1.Items.Add(Item)
@@ -541,7 +545,10 @@ Public Class Form1
                     End Select
 
                     Item = New ListViewItem(file.Name, file_icon)
-                    SubItems = New ListViewItem.ListViewSubItem() {New ListViewItem.ListViewSubItem(Item, file_type.ToString()), New ListViewItem.ListViewSubItem(Item, file.LastAccessTime.ToShortDateString())}
+
+                    Dim filesize As String = (file.Length / 1000000).ToString("N0") + " Mb"
+
+                    SubItems = New ListViewItem.ListViewSubItem() {New ListViewItem.ListViewSubItem(Item, filesize.ToString), New ListViewItem.ListViewSubItem(Item, file_type.ToString()), New ListViewItem.ListViewSubItem(Item, file.LastAccessTime.ToShortDateString())}
 
                     Item.SubItems.AddRange(SubItems)
                     ListView1.Items.Add(Item)
